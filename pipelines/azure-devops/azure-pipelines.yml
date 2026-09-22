@@ -1,0 +1,31 @@
+trigger:
+  branches:
+    include:
+      - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  TF_WORKING_DIR: 'infra/terraform'
+
+steps:
+- task: AzureCLI@2
+  displayName: 'Login Azure'
+  inputs:
+    azureSubscription: 'SERVICE-CONN-AZURE'
+    scriptType: 'bash'
+    scriptLocation: 'inlineScript'
+    inlineScript: |
+      az account show
+
+- script: |
+    cd $(TF_WORKING_DIR)
+    terraform init
+    terraform plan -out=tfplan
+  displayName: 'Terraform Plan'
+
+- script: |
+    cd $(TF_WORKING_DIR)
+    terraform apply -auto-approve tfplan
+  displayName: 'Terraform Apply'
