@@ -19,7 +19,7 @@ Ce dépôt contient l’infrastructure, les scripts, les pipelines CI/CD et la d
 - Azure Migrate + Site Recovery
 
 ##  Documentation
-Voir le dossier `/docs` pour :
+Voir le dossier `la documentation` pour :
 - Plan de migration
 - Checklist cutover
 - Plan de rollback
@@ -32,4 +32,4 @@ Voir le dossier `/docs` pour :
 - Scripts PowerShell pour Hyper‑V et Azure Migrate
 
 ##  Contact
-Projet maintenu par l’équipe Infrastructure & Cloud.
+Projet maintenu par l’équipe Infrastructure et Cloud.
