@@ -19,7 +19,7 @@ Ce dépôt contient l’infrastructure, les scripts, les pipelines CI/CD et la d
 - Azure Migrate + Site Recovery
 
 ##  Documentation
-Voir le dossier `la documentation` pour :
+Voir le dossier `/docs` pour :
 - Plan de migration
 - Checklist cutover
 - Plan de rollback
